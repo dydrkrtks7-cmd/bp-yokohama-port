@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yokohama-port.vercel.app/</loc>
+    <loc>https://yokohama-travel-local.pbn-builder.xyz/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yokohama-port.vercel.app/about.html</loc>
+    <loc>https://yokohama-travel-local.pbn-builder.xyz/about.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yokohama-port.vercel.app/blog.html</loc>
+    <loc>https://yokohama-travel-local.pbn-builder.xyz/blog.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://yokohama-port.vercel.app/feed.xml</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
