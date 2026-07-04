@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title><![CDATA[Yokohama Yokohama port 안내]]></title>
+  <link>https://yokohama-port.vercel.app</link>
+  <description><![CDATA[Yokohama 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
+  <language>ko-KR</language>
+  <pubDate>Thu, 28 May 2026 06:00:54 GMT</pubDate>
+  <lastBuildDate>Thu, 28 May 2026 06:00:54 GMT</lastBuildDate>
+  <atom:link href="https://yokohama-port.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
+  
+    <item>
+      <title><![CDATA[Yokohama Yokohama port 안내 - 공식 홈페이지 오픈 안내]]></title>
+      <link>https://yokohama-port.vercel.app/</link>
+      <guid isPermaLink="true">https://yokohama-port.vercel.app/</guid>
+      <description><![CDATA[Yokohama 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
+      <pubDate>Thu, 28 May 2026 06:00:54 GMT</pubDate>
+    </item>
+</channel>
+</rss>

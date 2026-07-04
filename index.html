@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요코하마 포트 안내 | Yokohama Port Guide - 공식 정보 포털</title>
+    <meta name="description" content="요코하마항(Yokohama Port)의 역사, 시설, 운영 데이터, 관광 명소 및 실시간 안내. 전문가가 제공하는 신뢰할 수 있는 항만 정보 포털입니다. 1872년 개항 이후 아시아 최대 무역항으로 성장한 요코하마항의 모든 것.">
+    <meta name="keywords" content="요코하마항, Yokohama port, 요코하마 항구, 미나토미라이, 오산바시, 요코하마 크루즈 터미널, 항만 물류, 요코하마 관광, 일본 항만 정보, port 안내">
+    <link rel="canonical" href="https://yokohama-port.vercel.app/">
+    
+    <!-- 디자인 시스템 메타 -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    
+    <!-- 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "요코하마 포트 안내",
+        "alternateName": "Yokohama Port Guide",
+        "url": "https://yokohama-port.vercel.app/",
+        "description": "요코하마항의 공식 안내 포털. 역사, 통계, 시설 정보, 관광 명소 및 실시간 운영 데이터 제공.",
+        "inLanguage": "ko-KR",
+        "telephone": "+82-10-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Yokohama",
+            "addressCountry": "JP"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://yokohama-port.vercel.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- 오픈 그래프 + 트위터 카드 -->
+    <meta property="og:title" content="요코하마 포트 안내 | Yokohama Port Guide - 공식 정보 포털">
+    <meta property="og:description" content="요코하마항의 역사, 시설, 운영 데이터, 관광 명소 및 실시간 안내. 1872년 개항 이후 아시아 최대 무역항으로 성장한 요코하마항의 모든 것.">
+    <meta property="og:url" content="https://yokohama-port.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yokohama-port.vercel.app/og-image.svg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="요코하마 포트 안내">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="요코하마 포트 안내 | Yokohama Port Guide">
+    <meta name="twitter:description" content="요코하마항의 역사, 시설, 운영 데이터, 관광 명소 및 실시간 안내. 전문가가 제공하는 신뢰할 수 있는 항만 정보 포털입니다.">
+    <meta name="twitter:image" content="https://yokohama-port.vercel.app/twitter-image.svg">
+
+    <style>
+        /* === 리셋 & 베이스 === */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111111;
+            color: #ffff00;
+            font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+            line-height: 1.5;
+            max-width: none;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === 타이포그래피 === */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Impact, 'Arial Black', 'Helvetica Neue', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            line-height: 0.95;
+            color: #ffff00;
+        }
+
+        h1 {
+            font-size: clamp(3.2rem, 12vw, 6rem);
+            margin-bottom: 0.2em;
+            border-bottom: 4px solid #00ff41;
+            display: inline-block;
+            padding-bottom: 0.1em;
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 6vw, 3.6rem);
+            margin-bottom: 0.4em;
+            border-left: 6px solid #00ff41;
+            padding-left: 0.3em;
+        }
+
+        h3 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            margin-bottom: 0.5em;
+        }
+
+        p,
+        li,
+        blockquote,
+        figcaption {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            max-width: 70ch;
+        }
+
+        a {
+            color: #00ff41;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 4px;
+            transition: color 0.15s ease;
+        }
+
+        a:hover,
+        a:focus {
+            color: #ffff00;
+        }
+
+        strong {
+            color: #00ff41;
+            font-weight: 700;
+        }
+
+        /* === 레이아웃 전역 === */
+        .container {
+            width: 100%;
+            max-width: none;
+            padding: 24px 24px 0;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 40px 24px;
+            margin: 0 -24px;
+            border-top: 4px solid #00ff41;
+            position: relative;
+        }
+
+        section:first-of-type {
+            border-top: none;
+        }
+
+        /* === 햄버거 메뉴 (반응형) === */
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            cursor: pointer;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #00ff41;
+            padding: 0.2em 0.4em;
+            border: 4px solid #00ff41;
+            background: #111111;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .nav-toggle-label:hover {
+            background: #222222;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 3px solid #ffff00;
+            background: #111111;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffff00;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav ul li a:hover {
+            background: #ffff00;
+            color: #111111;
+        }
+
+        /* === 헤더 === */
+        header {
+            padding: 24px 24px 16px;
+            border-bottom: 6px solid #00ff41;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: #111111;
+            position: relative;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 2.8rem;
+            line-height: 1;
+            transform: rotate(-8deg);
+            color: #00ff41;
+        }
+
+        .logo-text {
+            font-family: Impact, 'Arial Black', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            color: #ffff00;
+            border: 4px solid #ffff00;
+            padding: 4px 12px 2px;
+            background: #111111;
+            transform: skewX(-5deg);
+        }
+
+        /* === 히어로 === */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 24px;
+            align-items: center;
+            padding: 80px 24px 60px;
+            margin: 0 -24px 0;
+            background: #111111;
+            border-bottom: 6px solid #00ff41;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 120px;
+            height: 120px;
+            border: 4px solid #ffff00;
+            transform: rotate(15deg);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 180px;
+            height: 80px;
+            border: 4px solid #00ff41;
+            transform: skewX(-12deg);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            transform: rotate(-2deg);
+            border-bottom-color: #ffff00;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-top: 0.8em;
+            border-left: 6px solid #00ff41;
+            padding-left: 1em;
+            background: rgba(0, 255, 65, 0.05);
+            padding: 0.8em 1em;
+            max-width: 100%;
+        }
+
+        .hero-visual {
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a1a;
+            border: 6px solid #ffff00;
+            padding: 24px;
+            min-height: 260px;
+            transform: rotate(2deg) translateY(-8px);
+            position: relative;
+        }
+
+        .hero-visual svg {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            filter: drop-shadow(0 0 12px #00ff41);
+        }
+
+        /* === 정보 섹션 === */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .info-card {
+            background: #1a1a1a;
+            border: 4px solid #ffff00;
+            padding: 24px 20px;
+            transform: rotate(var(--rot, 0deg));
+            transition: transform 0.2s;
+        }
+
+        .info-card:nth-child(odd) {
+            --rot: -1deg;
+        }
+        .info-card:nth-child(even) {
+            --rot: 1.2deg;
+        }
+
+        .info-card h3 {
+            border-bottom: 3px solid #00ff41;
+            padding-bottom: 0.2em;
+            margin-bottom: 0.6em;
+            font-size: 1.6rem;
+        }
+
+        .info-card ul {
+            list-style: square;
+            padding-left: 1.2em;
+            color: #e0e0e0;
+        }
+
+        .info-card ul li {
+            margin-bottom: 0.3em;
+        }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #00ff41;
+            font-family: Impact, sans-serif;
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.1em;
+        }
+
+        /* === 리뷰 섹션 === */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .review-card {
+            background: #111111;
+            border: 4px solid #00ff41;
+            padding: 20px 18px;
+            position: relative;
+            transform: rotate(var(--rot-r, 0deg));
+        }
+
+        .review-card:nth-child(1) {
+            --rot-r: -0.8deg;
+        }
+        .review-card:nth-child(2) {
+            --rot-r: 1.6deg;
+        }
+        .review-card:nth-child(3) {
+            --rot-r: -1.4deg;
+        }
+        .review-card:nth-child(4) {
+            --rot-r: 0.7deg;
+        }
+        .review-card:nth-child(5) {
+            --rot-r: -2deg;
+        }
+
+        .review-card::before {
+            content: '“';
+            font-size: 4rem;
+            line-height: 0.6;
+            color: #ffff00;
+            opacity: 0.3;
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            font-family: Impact, sans-serif;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 3px solid #ffff00;
+            padding-bottom: 6px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffff00;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: #aaaaaa;
+        }
+
+        .review-stars {
+            color: #ffff00;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+
+        /* === 연락처 CTA === */
+        .contact-block {
+            background: #1a1a1a;
+            border: 6px solid #ffff00;
+            padding: 32px 28px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transform: skewX(-1deg);
+        }
+
+        .contact-block .phone-link {
+            font-size: 2.2rem;
+            font-weight: 900;
+            font-family: Impact, sans-serif;
+            color: #00ff41;
+            text-decoration: none;
+            border: 4px solid #00ff41;
+            padding: 8px 24px;
+            background: #111111;
+            display: inline-block;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .contact-block .phone-link:hover {
+            background: #00ff41;
+            color: #111111;
+        }
+
+        /* === 푸터 === */
+        footer {
+            padding: 32px 24px 24px;
+            border-top: 6px solid #00ff41;
+            margin-top: 0;
+            background: #111111;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        footer small {
+            font-size: 0.85rem;
+            color: #888888;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            margin-left: 16px;
+            text-decoration: underline 2px;
+        }
+
+        /* === 반응형 (768px) === */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px 16px 0;
+            }
+
+            section {
+                padding: 32px 16px;
+                margin: 0 -16px;
+            }
+
+            header {
+                padding: 16px 16px 12px;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 48px 16px 40px;
+                margin: 0 -16px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-visual {
+                transform: rotate(0deg) translateY(0);
+                min-height: 180px;
+            }
+
+            .hero-visual svg {
+                max-width: 240px;
+            }
+
+            /* 햄버거 메뉴 활성화 */
+            .nav-toggle-label {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 12px;
+                background: #111111;
+                border-top: 4px solid #00ff41;
+                padding: 12px 0;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                border: none;
+                border-left: 4px solid #ffff00;
+                padding: 12px 16px;
+                font-size: 1.1rem;
+            }
+
+            .nav-toggle:checked~nav ul {
+                display: flex;
+            }
+
+            .contact-block {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                transform: none;
+            }
+
+            .contact-block .phone-link {
+                font-size: 1.6rem;
+                padding: 8px 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links a {
+                margin: 0 8px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === 추가 브루탈리스트 터치 === */
+        ::selection {
+            background: #00ff41;
+            color: #111111;
+        }
+
+        :focus-visible {
+            outline: 4px solid #ffff00;
+            outline-offset: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 6px dashed #00ff41;
+            margin: 8px 0 24px;
+            opacity: 0.6;
+        }
+
+        blockquote {
+            border-left: 6px solid #ffff00;
+            padding-left: 1.2em;
+            margin: 1.2em 0;
+            background: rgba(255, 255, 0, 0.04);
+            padding: 1em;
+        }
+
+        /* 텍스처 느낌 */
+        .noise-bg {
+            background-image: repeating-linear-gradient(45deg,
+                    rgba(0, 255, 65, 0.02) 0px,
+                    rgba(0, 255, 65, 0.02) 2px,
+                    transparent 2px,
+                    transparent 6px);
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <span class="logo-icon" aria-hidden="true">⚓</span>
+            <span class="logo-text">Yokohama Port</span>
+        </div>
+        <div class="nav-toggle-wrapper">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="메뉴 열기">
+            <label for="nav-toggle" class="nav-toggle-label">☰</label>
+            <nav aria-label="주 메뉴">
+                <ul>
+                    <li><a href="#about">개요</a></li>
+                    <li><a href="#stats">데이터</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 히어로 섹션 -->
+        <section class="hero noise-bg" aria-label="히어로 배너">
+            <div class="hero-content">
+                <h1>Yokohama Port</h1>
+                <p><strong>일본 관문, 요코하마항</strong> — 1872년 개항 이래 아시아 태평
+</body>
+</html>
