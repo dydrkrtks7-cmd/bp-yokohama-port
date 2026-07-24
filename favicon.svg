@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#111827"/><text x="32" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#f9fafb">YO</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+  <title>Yokohama port 안내</title>
+  <rect width="64" height="64" rx="14" fill="hsl(232 70% 31%)"/>
+  <path d="M64 0v26L38 0Z" fill="hsl(355 68% 67%)" opacity="0.16"/>
+  <g transform="rotate(270 32 32)"><path d="M32 14 52 48H12Z" fill="none" stroke="hsl(232 24% 96%)" stroke-width="6" stroke-linejoin="round"/><path d="M32 30 41 46H23Z" fill="hsl(355 68% 67%)"/></g>
+</svg>
